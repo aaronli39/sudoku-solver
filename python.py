@@ -273,7 +273,7 @@ def solve3(state, back):
         board[row][col] = i
 
         # baccc is list of filled in
-        # certan cells
+        # certain cells
         baccc = fill()
 
         # backtracking
