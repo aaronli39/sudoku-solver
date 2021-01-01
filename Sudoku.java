@@ -225,12 +225,6 @@ public class Sudoku {
                         data.add(arr);
                         board[row][col] = temp[0];
                     } else if (temp.length == 0) {
-                        // if temp is 0, then we add false(-1)
-                        // List<Integer> arr = new ArrayList<>();
-                        // arr.add(-1);
-                        // arr.add(-1);
-                        // arr.add(-1);
-                        // data.add(arr);
                         int[][] ret = new int[data.size()][3];
                         for (int i = 0; i < data.size(); i++) {
                             for (int x = 0; x < 3; x++) {
@@ -244,11 +238,6 @@ public class Sudoku {
             }
         }
 
-        // List<Integer> arr = new ArrayList<>();
-        // arr.add(-2);
-        // arr.add(-2);
-        // arr.add(-2);
-        // data.add(arr);
         int[][] ret = new int[data.size()][3];
         for (int i = 0; i < data.size(); i++) {
             for (int x = 0; x < 3; x++) {
@@ -347,11 +336,6 @@ public class Sudoku {
     // 2. everything naive algorithm does, except instead of
     // using the first unsolved cell, it recurses through the
     // the unsolved cell with the least amount of guesses (validList)
-    // Smart algorithm
-    // 1. Fills in cells with 1 guess (cells we are certain of)
-    // 2. everything naive algorithm does, except instead of
-    // using the first unsolved cell, it recurses through the
-    // the unsolved cell with the least amount of guesses (validList)
     public boolean smart(int state) {
         // first fill in cells we are certain of
         if (state == 0) {
@@ -397,6 +381,10 @@ public class Sudoku {
         return false;
     }
 
+    // Smartest algorithm
+    // 1. Fills in cells with 1 guess (cells we are certain of)
+    // 2. everything smart algorithm does, except we fill in
+    // cells we are certain of at every single guess
     public boolean smartest(int state, int[][] back) {
         // first fill in cells we are certain of
         if (state == 0) {
