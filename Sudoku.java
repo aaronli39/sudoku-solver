@@ -451,9 +451,6 @@ public class Sudoku {
             System.out.println("You have entered an invalid number of arguments!");
             System.exit(0);
         }
-
-        // for (int[] arr : test.board) {
-        // System.out.println(Arrays.toString(arr));
-        // }
+        // need to work on case switch for user trying different solvers
     }
 }
